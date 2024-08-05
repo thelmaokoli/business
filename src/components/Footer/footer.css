@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --base-color-1: rgb(1, 1, 22);
+    --secondary: rgb(88, 88, 88);
+    --base-color-2: rgba(63, 68, 50, 0.432); 
+    --primary: rgb(238, 29, 98);
+    --primary-opaque:rgba(82, 68, 77, 0.438); 
+    --primary-opaque-light: rgba(211, 203, 208, 0.438);
+    --black: black;
+    --candy: rgb(238, 29, 98);
+    --candy-opaque: rgba(238, 29, 99, 0.658);
+    --white: white; 
+    --blue-kiss: rgb(161, 172, 192);
+
+    --big-container:  75%;
+    --medium-container:  86%;
+    --mini-container:  96%;
+
+    --transition: all 800ms ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+body{
+     /**background: linear-gradient(transparent);
+ font-family: 'Allura', cursive;
+font-family: 'Comic Neue', cursive;
+font-family: 'Diphylleia', serif;
+background-image: url('./assets/photos/dark-green.jpg'); 
+**/
+    background: var(--base-color-1);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    line-height: 2;
+    background-size: contain;
+}
+
+/** INHERITED **/
+.container{
+    width: var(--big-container);
+    margin: 0 auto; /** middle **/
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+    font-weight: 300;
+}
+
+
+
+section{
+    margin-top: 2rem;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+}
+
+section > h2 {
+    color: var(--primary);
+    margin-bottom: 5rem;
+}
+
+.candy{
+    color: var(--candy);
+}
+.white{
+    color: var(--white) !important;
+}
+
+
+ 
+
+
+.btn{
+    width: max-content; /** each button will be the size of its content **/
+    max-width: 48%;
+    display: inline-block;
+    color: var(--primary-opaque-light);
+    padding: 0.75rem 1rem; /** top bottom left right **/
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 1px solid var(--primary);
+    transition: var(--transition);
+    font-size: 2rem;
+}
+
+.btn:hover{
+    background: var(--white);
+    transition: 200ms ease;
+    border-color: transparent;
+    padding: 0.8rem 1.1rem;
+}
+
+.btn-main{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-main:hover{
+    color: black
+}
+.btn-secondary:hover{
+    color: rgba(250, 245, 245, 0.582);
+    background-color: rgb(19, 19, 49);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/** f **/
+
+footer {
+    background: var(--primary);
+    padding: 3rem 0 4rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 8rem;
+}
+
+footer a{
+    color: white;
+}
+
+.footer-logo{
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+    transition: 400ms ease;
+}
+.footer-logo:hover{
+    transform: scale(1.1);
+}
+
+.permalink{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+    transition: 400ms ease;
+}
+.permalink:hover{
+    letter-spacing: 0.1rem;
+}
+
+.footer-social-media{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer-social-media a{
+    background: var(--base-color-2);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    border: 1px solid transparent;
+}
+
+.footer-social-media a:hover{
+    background: transparent;
+    color: var(--base-color-2);
+    border-color: var(--base-color-2);
+}
+
+.copyright{
+    margin-bottom: 6rem;
+    color: white;
+}
+
+.out:hover{
+    transform: rotate(-10deg);
+}
+
+.in:hover{
+    transform: rotate(10deg);
+}
+
+
+/** MEDIA QUERIES **/
+
+/** jumbo **/
+@media screen and (min-width: 1600px) {
+
+}
+
+/** MED / TABLET **/
+@media screen and (max-width: 1024px) {
+/**inherited **/
+.container {
+    width: var(--medium-container);
+}
+section {
+    margin-top: 8rem ;
+}
+    /** **/
+ }
+ 
+ /** SMALL / TABLET **/
+ @media screen and (max-width: 600px) {
+      /**inherited **/
+      .container {
+        width: var(--mini-container);
+    }
+    section > h2 {
+        margin-bottom: 2rem ;
+    }
+        /** **/
+    .permalink{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-social-media{
+        margin-bottom: 3rem;
+    }
+ }

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+
+:root{
+
+    --base-color-1: rgb(1, 1, 22);
+    --secondary: rgb(88, 88, 88);
+    --base-color-2: rgba(63, 68, 50, 0.432); 
+
+    --primary: rgb(238, 29, 98);
+    --milkshake: rgb(245, 90, 141);
+    
+    --primary-opaque:rgba(82, 68, 77, 0.438); 
+    --primary-opaque-light: rgba(211, 203, 208, 0.438);
+    --black: black;
+    --candy: rgb(238, 29, 98);
+    --candy-opaque: rgba(238, 29, 99, 0.658);
+    --white: white; 
+    --blue-kiss: rgb(161, 172, 192);
+
+    --big-container:  75%;
+    --medium-container:  86%;
+    --mini-container:  96%;
+
+    --transition: all 800ms ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+body{
+     /**background: linear-gradient(transparent);
+ font-family: 'Allura', cursive;
+font-family: 'Comic Neue', cursive;
+font-family: 'Diphylleia', serif;
+background-image: url('./assets/photos/dark-green.jpg'); 
+**/
+    background: var(--base-color-1);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    line-height: 2;
+    background-size: contain;
+}
+
+.btn{
+    width: max-content; /** each button will be the size of its content **/
+    max-width: 58%;
+    display: inline-block;
+    padding: 0.75rem 1rem; /** top bottom left right **/
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 2rem;
+} 
+
+.btn:hover{
+    transition: 200ms ease;
+    padding: 0.8rem 1.1rem;
+}
+
+.btn-main{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary{
+    color: rgba(250, 245, 245, 0.781);;
+    background: rgb(19, 19, 49);
+    border: transparent;
+}
+
+.btn-main:hover{
+    color: black;
+    background: var(--white);
+}
+.btn-secondary:hover{
+    background: transparent;
+    color:  white;
+    border: 1px solid var(--primary);
+    font-weight: 300;
+}
+
+
+/** MEDIA QUERIES **/
+
+/** jumbo **/
+@media screen and (min-width: 1600px) {
+   
+}
+
+/** MED / TABLET **/
+@media screen and (max-width: 1024px) {
+
+}
+/** SMALL / TABLET **/
+@media screen and (max-width: 600px) {
+
+    .btn{
+        font-size: 1.3rem !important;
+
+       }
+  
+}
+
+ /** MINI  **/
+ @media screen and (max-width: 475px) {
+   .btn{
+       font-size: 1rem !important;
+      }
+ }

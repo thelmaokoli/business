@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --base-color-1: rgb(1, 1, 22);
+    --secondary: rgb(88, 88, 88);
+    --base-color-2: rgba(63, 68, 50, 0.432); 
+    --primary: rgb(238, 29, 98);
+    --primary-opaque:rgba(82, 68, 77, 0.438); 
+    --primary-opaque-light: rgba(211, 203, 208, 0.438);
+    --black: black;
+    --candy: rgb(238, 29, 98);
+    --candy-opaque: rgba(238, 29, 99, 0.658);
+    --white: white; 
+    --blue-kiss: rgb(161, 172, 192);
+
+    --big-container:  75%;
+    --medium-container:  86%;
+    --mini-container:  96%;
+
+    --transition: all 800ms ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+body{
+     /**background: linear-gradient(transparent);
+ font-family: 'Allura', cursive;
+font-family: 'Comic Neue', cursive;
+font-family: 'Diphylleia', serif;
+background-image: url('./assets/photos/dark-green.jpg'); 
+**/
+    background: var(--base-color-1);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    line-height: 2;
+    background-size: contain;
+}
+
+/** INHERITED **/
+.container{
+    width: var(--big-container);
+    margin: 0 auto; /** middle **/
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+    font-weight: 300;
+}
+
+
+
+section{
+    margin-top: 2rem;
+}
+
+section > h2, section > h5 {
+    text-align: center;
+}
+
+section > h2 {
+    color: var(--primary);
+    margin-bottom: 5rem;
+}
+
+.candy{
+    color: var(--candy);
+}
+.white{
+    color: var(--white) !important;
+}
+
+
+ 
+
+
+.btn{
+    width: max-content; /** each button will be the size of its content **/
+    max-width: 48%;
+    display: inline-block;
+    padding: 0.75rem 1rem; /** top bottom left right **/
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 2rem;
+}
+
+.btn:hover{
+    transition: 200ms ease;
+    padding: 0.8rem 1.1rem;
+}
+
+.btn-main{
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary{
+    color: rgba(250, 245, 245, 0.582);
+    background-color: rgb(19, 19, 49);
+}
+
+.btn-main:hover{
+    color: black;
+    background: var(--white);
+}
+.btn-secondary:hover{
+    color: var(--primary-opaque-light);
+    border: 1px solid var(--primary);
+}
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/** n **/
+nav{
+    overflow: visible;
+    background: rgba(0, 0, 0, 0.267);
+    width: max-content;
+    display: block;
+    padding: 1rem 2rem; 
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 4rem;
+    backdrop-filter: blur(20px);
+}
+
+nav a {
+    padding: 0.75rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--candy-opaque);
+    font-size: 1rem;
+}
+
+nav a:hover{
+    background: rgba(14, 14, 53, 0.308);
+    color: var(--candy);
+}
+
+nav a.active{
+    background: rgba(22, 22, 104, 0.308);
+    color: var(--white);
+}
